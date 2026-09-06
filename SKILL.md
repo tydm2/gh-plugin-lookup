@@ -1,16 +1,16 @@
 ---
 name: gh-plugin-lookup
-description: 当用户说「检索/查一下 GitHub 插件 xxx」「这个插件怎么装/怎么用」「查插件信息」时使用：输入 npm 包名或 GitHub 仓库名，先查 npm registry，再用 node --use-system-ca 取 GitHub README，一条命令输出 npm 版本/dist-tags、仓库地址、README 安装命令与要点。不用于下载/克隆仓库文件、推送到 GitHub（用 gh-publisher）、大文件下载。
+description: 检索 GitHub 插件 / npm 包信息并给出安装命令。当用户说「检索/查一下 GitHub 插件 xxx」「这个插件怎么装/怎么用」「查插件信息」或输入 /gh-plugin-lookup 时使用：输入 npm 包名或仓库名，一条命令输出版本、仓库地址、README 安装命令与要点。不用于下载/克隆仓库文件，也不用于推送到 GitHub（用 gh-publisher）。
+license: MIT
+user-invocable: true
 metadata:
-  version: 1.0.0
-  languages: [zh]
-  changelog:
-    - 1.0.0: 初始版本：固化本机网络事实（npm 直连可用、GitHub 需 --use-system-ca、禁 Invoke-WebRequest/curl），一条命令检索插件信息
+  version: 1.1.0
 ---
+
 
 # gh-plugin-lookup
 
-输入插件名 → 输出安装命令 + README 要点。**一条命令**，不再试错。
+输入插件名 → 输出安装命令 + README 要点。**一条命令**，不再试错。变更历史见 `references/CHANGELOG.md`。
 
 ## 何时用 / 何时不用
 
